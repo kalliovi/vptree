@@ -5,8 +5,6 @@
 //!n = 100000; d = 2; % works for any d
 //This is a a two dimensional matrix 100000x2
 //!X = rand(n,d);
-//! A vantage point is a random point/potition in this matrix above
-
 //! type definition of vptree
 typedef struct vptree {
   // Array of size d containing the point's coordinates
@@ -20,7 +18,7 @@ typedef struct vptree {
  struct vptree *outer; // pointer outside
 
 } vptree ;
-// ========== LIST OF ACCESSORS
+// ========== LIST OF ACCESSORS  ========== \\
 vptree *vpt(int *index,double *X,int n,int d);
 
 vptree * buildvp(double *X, int n, int d);
