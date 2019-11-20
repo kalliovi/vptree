@@ -5,7 +5,7 @@
 
 
 vptree * buildvp(double *X, int n, int d){
-  int * index = malloc(n*sizeof(int)); //!Krataw index
+  int * index = malloc(n*sizeof(int)); 
   for (int i=0; i<n; i++)
   {
     index[i] = i;
@@ -13,7 +13,7 @@ vptree * buildvp(double *X, int n, int d){
   vptree *tree = vpt(index,X,n,d);
   return tree;
 } //!Na thn!!!H synartish toy
-vptree *vpt(int *index,double *X,int n,int d){ //!Aftin exei kai ton index mallon gia ayto thn thelw thn evala kai sto .h
+vptree *vpt(int *index,double *X,int n,int d){ 
     if(n <= 0)
     {
     return NULL;
@@ -21,7 +21,7 @@ vptree *vpt(int *index,double *X,int n,int d){ //!Aftin exei kai ton index mallo
 	}
 	if(n==1){
 		vptree *tree = (vptree *)malloc(sizeof(vptree));
-		tree->median=0; //! den exei median pio katw einai teleutaio simio
+		tree->median=0; 
 		tree->vp=&X[index[n-1]*d];
 		tree->index=index[n-1];
 		tree->inner=NULL;
@@ -30,7 +30,7 @@ vptree *vpt(int *index,double *X,int n,int d){ //!Aftin exei kai ton index mallo
 	}
     else{
 		vptree *tree = (vptree *)malloc(sizeof(vptree));
-        double *distance=(double *)malloc((n-1)*sizeof(double)); //!Metraw apostaseis
+        double *distance=(double *)malloc((n-1)*sizeof(double)); 
         for(int i=0;i<n-1;i++){
             double temp=0;
             for(int j=0;j<d;j++){
