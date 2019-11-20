@@ -5,7 +5,7 @@
 #include <omp.h>
 
 vptree * buildvp(double *X, int n, int d){
-  int * index = malloc(n*sizeof(int)); //!Krataw index
+  int * index = malloc(n*sizeof(int)); 
   for (int i=0; i<n; i++)
   {
     index[i] = i;
@@ -13,7 +13,7 @@ vptree * buildvp(double *X, int n, int d){
   vptree *tree = vpt(index,X,n,d);
   return tree;
 } //!Na thn!!!H synartish toy
-vptree *vpt(int *index,double *X,int n,int d){ //!Aftin exei kai ton index mallon gia ayto thn thelw thn evala kai sto .h
+vptree *vpt(int *index,double *X,int n,int d){ 
     if(n <= 0)
     {
     return NULL;
